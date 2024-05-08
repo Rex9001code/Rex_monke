@@ -36,6 +36,9 @@
 	icon_state = "sandmoving"
 	base_icon_state = "sandmoving"
 	icon = 'icons/turf/floors.dmi'
+	smoothing_flags = NONE
+	smoothing_groups = NONE
+	canSmoothWith = NONE
 
 /turf/open/chasm/fake_motion_sand/fast
 	icon_state = "sandmovingfast"
