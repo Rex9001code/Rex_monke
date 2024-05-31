@@ -290,15 +290,6 @@
 "bB" = (
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
-"bC" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 1
-	},
-/turf/open/floor/iron/dark)
 "bE" = (
 /obj/machinery/door/poddoor/preopen,
 /obj/effect/turf_decal/stripes/line,
@@ -306,7 +297,15 @@
 /turf/open/floor/iron/smooth_large,
 /area/space/nearstation)
 "bF" = (
-/turf/open/floor/iron/recharge_floor)
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/trimline/dark_red/filled/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/large,
+/area/station/security/brig/upper)
 "bG" = (
 /obj/structure/cable,
 /obj/machinery/vending/security,
@@ -633,7 +632,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/turf/open/floor/iron/dark)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "dv" = (
 /obj/structure/closet/firecloset,
 /obj/effect/landmark/start/hangover/closet,
@@ -810,9 +810,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
 /turf/open/floor/iron/large,
 /area/station/security/brig/upper)
 "eM" = (
@@ -1071,11 +1068,6 @@
 	},
 /turf/open/floor/iron/dark/small,
 /area/station/ai_monitored/security/armory)
-"fU" = (
-/obj/machinery/computer/mech_bay_power_console{
-	dir = 4
-	},
-/turf/open/floor/iron)
 "fV" = (
 /obj/machinery/door/airlock{
 	name = "Bar"
@@ -1190,13 +1182,8 @@
 /area/station/security/lockers)
 "gO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/iron/dark)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "gP" = (
 /obj/effect/spawner/random/trash/grille_or_waste,
 /turf/open/floor/plating,
@@ -1266,10 +1253,15 @@
 /turf/open/floor/plating/rust,
 /area/station/maintenance/aft/lesser)
 "hk" = (
-/obj/machinery/mech_bay_recharge_port{
-	dir = 2
+/obj/machinery/light/directional/west,
+/obj/structure/closet{
+	name = "evidence closet 3"
 	},
-/turf/open/floor/iron)
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "hl" = (
 /obj/machinery/button/door/directional/south{
 	id = "armory";
@@ -1370,11 +1362,15 @@
 "hI" = (
 /area/station/maintenance/aft/lesser)
 "hJ" = (
-/obj/structure/table,
-/obj/item/weldingtool,
-/obj/item/wrench,
-/obj/item/screwdriver,
-/turf/open/floor/iron/dark)
+/obj/machinery/light/directional/east,
+/obj/structure/filingcabinet/security{
+	pixel_x = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "hL" = (
 /obj/structure/curtain,
 /turf/open/floor/plating,
@@ -1451,13 +1447,12 @@
 "in" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/obj/effect/turf_decal/stripes/corner{
+/obj/machinery/light_switch/directional/south,
+/obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
-/obj/machinery/light_switch/directional/south,
-/obj/structure/table,
-/obj/item/storage/belt/utility,
-/turf/open/floor/iron/dark)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "ip" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/table/glass,
@@ -1470,20 +1465,6 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/hos)
-"is" = (
-/obj/effect/turf_decal/trimline/dark_red/filled/line{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
-/obj/machinery/button/door/directional/north{
-	id = "secmechbay";
-	name = "Security Mech Garage Door Controls";
-	req_access = list("security")
-	},
-/turf/open/floor/iron/large,
-/area/station/security/brig/upper)
 "it" = (
 /turf/open/misc/beach/sand,
 /turf/closed/wall,
@@ -2732,8 +2713,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron/dark)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "qk" = (
 /obj/machinery/light/dim/directional/south,
 /obj/item/kirbyplants/random,
@@ -2766,19 +2747,13 @@
 /turf/open/floor/iron/smooth,
 /area/station/command/heads_quarters/hos)
 "qt" = (
-/obj/machinery/button/door/directional/south{
-	id = "secmechbay";
-	name = "Security Mech Garage Door Controls";
-	req_access = list("security")
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
 	},
-/obj/effect/turf_decal/stripes/corner,
-/obj/structure/table,
-/obj/item/poster/random_official{
-	pixel_y = 10
-	},
-/obj/item/poster/random_official,
-/obj/machinery/light/directional/south,
-/turf/open/floor/iron/dark)
+/obj/item/storage/secure/safe/directional/west,
+/obj/machinery/flasher/portable,
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "qu" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig Control"
@@ -2940,12 +2915,10 @@
 /turf/open/floor/iron/large,
 /area/station/security/brig)
 "rl" = (
-/obj/machinery/door/poddoor/shutters{
-	id = "secmechbay";
-	name = "Security Mech Bay Shutters"
-	},
-/obj/effect/turf_decal/stripes/full,
-/turf/open/floor/iron/dark)
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "rq" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -3072,7 +3045,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "rY" = (
-/turf/closed/wall)
+/turf/closed/wall,
+/area/station/security/evidence)
 "sa" = (
 /obj/effect/turf_decal/trimline/dark_red/filled/line{
 	dir = 4
@@ -3755,10 +3729,12 @@
 /area/station/security/holding_cell)
 "vB" = (
 /obj/machinery/airalarm/directional/west,
-/obj/structure/table,
-/obj/item/stack/rods/two,
-/obj/item/stack/cable_coil/five,
-/turf/open/floor/iron/dark)
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/flasher/portable,
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "vD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3948,14 +3924,9 @@
 /turf/open/floor/iron/dark,
 /area/station/security/courtroom)
 "wI" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/iron/dark)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "wK" = (
 /obj/structure/flora/tree/palm/style_random,
 /obj/structure/flora/bush/flowers_br/style_random,
@@ -4773,14 +4744,15 @@
 /turf/open/floor/carpet/blue,
 /area/station/security/courtroom)
 "Bf" = (
-/obj/machinery/mech_bay_recharge_port{
-	dir = 2
-	},
 /obj/item/radio/intercom/directional/east,
-/turf/open/floor/iron)
-"Bg" = (
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron/dark)
+/obj/structure/closet{
+	name = "evidence closet 3"
+	},
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "Bh" = (
 /obj/effect/turf_decal/trimline/dark_red/filled/line{
 	dir = 8
@@ -5922,15 +5894,15 @@
 /turf/open/floor/iron/smooth_large,
 /area/space/nearstation)
 "HK" = (
-/obj/machinery/door/poddoor/shutters{
-	id = "secmechbay";
-	name = "Security Mech Bay Shutters"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/stripes/full,
-/turf/open/floor/iron/dark)
+/obj/machinery/door/airlock/security{
+	name = "Evidence Storage"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "HQ" = (
 /obj/effect/turf_decal/trimline/dark_red/filled/line,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6082,10 +6054,12 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/range)
 "IB" = (
-/obj/machinery/computer/mech_bay_power_console{
+/obj/structure/closet/secure_closet/evidence,
+/obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
-/turf/open/floor/iron)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "ID" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -6554,10 +6528,14 @@
 /turf/open/floor/iron/half,
 /area/station/hallway/primary/central/fore)
 "Lh" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
+/obj/structure/closet{
+	name = "evidence closet 3"
 	},
-/turf/open/floor/iron/dark)
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "Li" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
@@ -6587,11 +6565,15 @@
 /turf/open/floor/iron/dark,
 /area/station/security/courtroom)
 "Lu" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark)
+/obj/structure/closet{
+	name = "evidence closet 3"
+	},
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "Ly" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -6843,13 +6825,8 @@
 /turf/open/floor/plating/airless,
 /area/station/solars/port/aft)
 "MM" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/iron/dark)
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "MN" = (
 /obj/machinery/duct,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7003,9 +6980,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/large,
 /area/station/security/brig/upper)
@@ -7162,7 +7136,8 @@
 "OO" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
-/turf/open/floor/plating)
+/turf/open/floor/plating,
+/area/station/security/evidence)
 "OU" = (
 /obj/structure/sign/departments/maint,
 /turf/closed/wall,
@@ -7817,7 +7792,11 @@
 "SI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark)
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "SJ" = (
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -8487,8 +8466,14 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/range)
 "WV" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/iron/recharge_floor)
+/obj/structure/closet{
+	name = "evidence closet 3"
+	},
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/evidence)
 "WZ" = (
 /obj/item/book/manual/wiki/security_space_law{
 	pixel_y = 2
@@ -86667,14 +86652,14 @@ ja
 ja
 ja
 OO
-fU
+Lh
 hk
-bF
+Lh
 Lh
 vB
 qt
 rY
-is
+PA
 cB
 DG
 Xp
@@ -86927,9 +86912,9 @@ OO
 MM
 wI
 gO
-bC
+gO
 du
-Bg
+MM
 rl
 eL
 OI
@@ -87959,7 +87944,7 @@ iT
 sV
 ox
 YU
-eM
+bF
 OI
 DG
 Qc
