@@ -44353,12 +44353,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
-"pLz" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/spawner/random/loafer,
-/obj/effect/spawner/random/structure/crate,
-/turf/open/floor/plating,
-/area/station/maintenance/port/fore)
 "pMd" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/engine/n2,
@@ -52741,12 +52735,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
-"sEH" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/item/tank/internals/oxygen,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible/layer4,
-/turf/open/floor/plating,
-/area/station/maintenance/port/fore)
 "sEI" = (
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
 	dir = 4
@@ -90967,8 +90955,8 @@ aaa
 aaa
 aaa
 jXu
-sEH
-pLz
+aJK
+xZv
 siY
 jXu
 jXu
