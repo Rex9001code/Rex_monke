@@ -136,13 +136,13 @@
 	if((75 > biomass) && (evolution_level != 1))
 		evolution(1)
 		return TRUE
-	if((125 > biomass >= 75) && (evolution_level != 2))
+	if((125 > biomass) && (biomass >= 75) && (evolution_level != 2))
 		evolution(2)
 		return TRUE
-	if((175 > biomass) >= 125 && (evolution_level != 3))
+	if((175 > biomass) && (biomass >= 125) && (evolution_level != 3))
 		evolution(3)
 		return TRUE
-	if((225 > biomass >= 175) && (evolution_level != 4))
+	if((225 > biomass) && (biomass >= 175) && (evolution_level != 4))
 		evolution(4)
 		return TRUE
 	if((biomass >= 225) && (evolution_level != 5))
