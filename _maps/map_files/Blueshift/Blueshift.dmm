@@ -1034,9 +1034,6 @@
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/turret_protected/ai)
-"akd" = (
-/turf/closed/wall,
-/area/station/security/medical)
 "akf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -151468,7 +151465,7 @@ hGf
 pRF
 fAy
 rKn
-akd
+bii
 bii
 bii
 uYO
@@ -151725,7 +151722,7 @@ hGf
 rYT
 mjK
 wMc
-akd
+bii
 wZT
 fbj
 cue
