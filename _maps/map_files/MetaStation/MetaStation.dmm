@@ -1926,9 +1926,7 @@
 /turf/open/floor/plating,
 /area/station/hallway/secondary/service)
 "aJK" = (
-/obj/structure/reagent_dispensers/plumbed{
-	dir = 8
-	},
+/obj/structure/reagent_dispensers/plumbed,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "aJN" = (

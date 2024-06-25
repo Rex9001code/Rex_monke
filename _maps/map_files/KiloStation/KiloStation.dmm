@@ -16646,7 +16646,9 @@
 "fqx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/burnt_floor,
-/obj/structure/reagent_dispensers/plumbed,
+/obj/structure/reagent_dispensers/plumbed{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "fqG" = (
@@ -20569,7 +20571,9 @@
 	dir = 6
 	},
 /obj/effect/mapping_helpers/burnt_floor,
-/obj/structure/reagent_dispensers/plumbed,
+/obj/structure/reagent_dispensers/plumbed{
+	dir = 4
+	},
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)

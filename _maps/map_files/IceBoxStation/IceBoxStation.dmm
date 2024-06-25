@@ -23215,7 +23215,9 @@
 /turf/open/floor/iron,
 /area/station/cargo/drone_bay)
 "hwh" = (
-/obj/machinery/duct,
+/obj/structure/reagent_dispensers/watertank{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "hwn" = (
@@ -28469,7 +28471,8 @@
 /area/station/security/prison/work)
 "jhL" = (
 /obj/structure/reagent_dispensers/plumbed{
-	name = "dormitory water reservoir"
+	name = "dormitory water reservoir";
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
@@ -33778,10 +33781,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/ai_upload,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat_interior)
-"kQE" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plating,
-/area/station/maintenance/fore)
 "kQM" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
@@ -241225,7 +241224,7 @@ jhL
 hwh
 deY
 deY
-kQE
+deY
 deY
 fhz
 deY

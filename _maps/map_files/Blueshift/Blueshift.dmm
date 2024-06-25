@@ -22648,9 +22648,8 @@
 "etj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/reagent_dispensers/plumbed{
-	dir = 8
+	dir = 1
 	},
-/obj/machinery/duct,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "etk" = (
@@ -81174,6 +81173,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /obj/effect/spawner/random/structure/steam_vent,
+/obj/machinery/duct,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "pRI" = (
@@ -98805,9 +98805,8 @@
 /area/station/engineering/transit_tube)
 "thg" = (
 /obj/structure/reagent_dispensers/plumbed{
-	dir = 8
+	dir = 1
 	},
-/obj/machinery/duct,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "thj" = (
@@ -113098,7 +113097,7 @@
 	c_tag = "Security - Medbay"
 	},
 /obj/structure/bodycontainer/morgue{
-	dir = 2
+	dir = 1
 	},
 /turf/open/floor/iron/dark/textured_half{
 	dir = 1
@@ -119140,7 +119139,6 @@
 /obj/machinery/shower/directional/south,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/machinery/duct,
 /obj/item/reagent_containers/blood,
 /obj/machinery/iv_drip,
 /turf/open/floor/iron/white/textured,
@@ -150693,7 +150691,7 @@ gPp
 mjE
 ofH
 pyk
-thg
+eBw
 etj
 rKn
 xrJ
@@ -151205,7 +151203,7 @@ mhN
 mhN
 mhN
 mjE
-laf
+pyk
 dAg
 eBw
 gci
@@ -151719,9 +151717,9 @@ cYq
 saz
 nnK
 hGf
-rYT
-mjK
-wMc
+kxG
+gci
+thg
 bii
 wZT
 fbj
