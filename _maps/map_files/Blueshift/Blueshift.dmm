@@ -113097,7 +113097,7 @@
 	c_tag = "Security - Medbay"
 	},
 /obj/structure/bodycontainer/morgue{
-	dir = 1
+	dir = 2
 	},
 /turf/open/floor/iron/dark/textured_half{
 	dir = 1
