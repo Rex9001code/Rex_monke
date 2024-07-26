@@ -77,15 +77,11 @@
 /mob/living/basic/bloodling/proper/Initialize(mapload)
 	. = ..()
 
-	RegisterSignal(src, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(on_damaged))
 	// All evolutions over 2 (3,4,5) are spess proof
 	if(evolution_level > 2)
 		ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 
 /mob/living/basic/bloodling/proper/adjust_health(amount, updating_health = TRUE, forced = FALSE)
-	if(!forced)
-		return 0
-
 	. = amount
 
 	add_biomass(amount)
@@ -192,22 +188,6 @@
 		mind.transfer_to(new_bloodling)
 	new_bloodling.add_biomass(biomass)
 	qdel(src)
-
-/// Checks for damage to update the bloodlings biomass accordingly
-/mob/living/basic/bloodling/proper/proc/on_damaged(datum/source, damage, damagetype)
-	SIGNAL_HANDLER
-
-	var/damage_amount = damage
-	// Stamina damage is fucky, so we'll ignore it
-	if(damagetype == STAMINA)
-		return
-
-	if(damagetype == BURN)
-	// Bloodlings take additional burning damage
-		damage_amount *= 1.5
-
-	// Bloodlings take damage through their biomass, not regular damage
-	add_biomass(-damage_amount)
 
 /mob/living/basic/bloodling/proper/Destroy()
 	UnregisterSignal(src, COMSIG_MOB_APPLY_DAMAGE)
