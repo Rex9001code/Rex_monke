@@ -84,9 +84,7 @@
 /mob/living/basic/bloodling/proper/adjust_health(amount, updating_health = TRUE, forced = FALSE)
 	. = amount
 
-	add_biomass(amount)
-	if(updating_health)
-		update_health_hud()
+	add_biomass(-amount)
 
 	return .
 
