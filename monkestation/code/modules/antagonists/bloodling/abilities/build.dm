@@ -1,7 +1,7 @@
 /datum/action/cooldown/bloodling/build
 	name = "Mold Flesh"
 	desc = "Use your biomass to forge creatures or structures."
-	button_icon_state = "alien_resin"
+	button_icon_state = "build"
 	biomass_cost = 30
 	/// A list of all structures we can make.
 	var/static/list/structures = list(
