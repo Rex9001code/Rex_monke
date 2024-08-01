@@ -1,7 +1,7 @@
 /datum/action/cooldown/mob_cooldown/bloodling/transfer_biomass
 	name = "Transfer Biomass"
 	desc = "Transfer biomass to another organism."
-	button_icon_state = "dissonant_shriek"
+	button_icon_state = "transfer"
 
 /datum/action/cooldown/mob_cooldown/bloodling/transfer_biomass/PreActivate(atom/target)
 	var/mob/living/mob = target
