@@ -69,7 +69,6 @@
 	sight = SEE_SELF|SEE_MOBS
 	hud_type = /datum/hud/bloodling
 
-	biomass = 50
 	biomass_max = 750
 	/// The evolution level our bloodling is on
 	var/evolution_level = 0
@@ -184,7 +183,8 @@
 	if(mind)
 		mind.name = new_bloodling.real_name
 		mind.transfer_to(new_bloodling)
-	new_bloodling.add_biomass(biomass)
+	// Runs = instead of add_biomass because the tier 1 bloodling has 50 biomass to start with
+	new_bloodling.biomass = biomass
 	qdel(src)
 
 /mob/living/basic/bloodling/proper/Destroy()
@@ -204,6 +204,7 @@
 /mob/living/basic/bloodling/proper/tier1/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
+	add_biomass(50)
 
 /mob/living/basic/bloodling/proper/tier2
 	icon_state = "guard"

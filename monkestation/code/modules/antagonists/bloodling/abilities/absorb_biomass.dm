@@ -2,9 +2,15 @@
 	name = "Absorb Biomass"
 	desc = "Allows you to absorb a dead carbon or living mob close to you."
 	button_icon_state = "absorb"
+	/// If the bloodling is currently absorbing
+	var/is_absorbing = FALSE
 
 /datum/action/cooldown/mob_cooldown/bloodling/absorb/PreActivate(atom/target)
 	if(owner == target)
+		return FALSE
+
+	if(is_absorbing)
+		our_mob.balloon_alert(our_mob, "Already absorbing!")
 		return FALSE
 
 	if(istype(target, /obj/item/food/deadmouse))
@@ -63,10 +69,14 @@
 			biomass_gain = 100
 			absorb_time = 10 SECONDS
 
+	// Setting this to true means they cant target the same person multiple times, or other people since it allows for speedrunning
+	is_absorbing = TRUE
+
 	if(!do_after(owner, absorb_time, mob_to_absorb))
 		mob_to_absorb.RemoveComponentSource(REF(src), /datum/component/leash)
 		return FALSE
 
+	is_absorbing = FALSE
 	our_mob.add_biomass(biomass_gain)
 	mob_to_absorb.gib()
 	our_mob.visible_message(
