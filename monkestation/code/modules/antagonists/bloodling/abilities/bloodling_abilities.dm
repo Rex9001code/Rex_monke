@@ -2,6 +2,8 @@
 	name = "debug"
 	desc = "Yell at coders if you see this"
 	button_icon = 'monkestation/code/modules/antagonists/bloodling/sprites/bloodling_abilities.dmi'
+	background_icon = 'monkestation/icons/mob/actions/backgrounds.dmi'
+	background_icon_state = "bg_bloodling"
 	/// The biomass cost of the ability
 	var/biomass_cost = 0
 
@@ -46,6 +48,8 @@
 	name = "debug"
 	desc = "Yell at coders if you see this"
 	button_icon = 'monkestation/code/modules/antagonists/bloodling/sprites/bloodling_abilities.dmi'
+	background_icon = 'monkestation/icons/mob/actions/backgrounds.dmi'
+	background_icon_state = "bg_bloodling"
 	// The biomass cost of the ability
 	var/biomass_cost = 0
 

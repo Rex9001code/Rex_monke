@@ -10,7 +10,7 @@
 		return FALSE
 
 	if(is_absorbing)
-		our_mob.balloon_alert(our_mob, "Already absorbing!")
+		owner.balloon_alert(owner, "Already absorbing!")
 		return FALSE
 
 	if(istype(target, /obj/item/food/deadmouse))

@@ -1,7 +1,9 @@
 /datum/action/cooldown/bloodling_hivespeak
 	name = "Hivespeak"
 	desc = "Whispered words that all in your hive can hear."
-	button_icon_state = "cult_comms"
+	button_icon_state = "hivemind"
+	background_icon = 'monkestation/icons/mob/actions/backgrounds.dmi'
+	background_icon_state = "bg_bloodling"
 
 /datum/action/cooldown/bloodling_hivespeak/IsAvailable(feedback = FALSE)
 	if(IS_BLOODLING_OR_THRALL(owner))
