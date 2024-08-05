@@ -1,7 +1,7 @@
 /datum/action/cooldown/mob_cooldown/bloodling/devour
 	name = "Devour Limb"
 	desc = "Allows you to consume a creatures limb."
-	button_icon_state = "alien_hide"
+	button_icon_state = "devour"
 	cooldown_time = 20 SECONDS
 
 /datum/action/cooldown/mob_cooldown/bloodling/devour/PreActivate(atom/target)
