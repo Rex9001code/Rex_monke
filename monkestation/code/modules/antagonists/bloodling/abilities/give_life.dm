@@ -1,7 +1,7 @@
 /datum/action/cooldown/mob_cooldown/bloodling/give_life
 	name = "Give Life"
 	desc = "Bestow the gift of life onto the ignorant."
-	button_icon_state = "alien_hide"
+	button_icon_state = "give_life"
 
 /datum/action/cooldown/mob_cooldown/bloodling/give_life/PreActivate(atom/target)
 	if(!ismob(target))
