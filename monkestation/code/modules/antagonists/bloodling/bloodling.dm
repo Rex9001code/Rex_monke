@@ -4,7 +4,7 @@
 	antagpanel_category = ANTAG_GROUP_BLOODLING
 	job_rank = ROLE_BLOODLING
 	antag_moodlet = /datum/mood_event/focused
-	antag_hud_name = "changeling"
+	antag_hud_name = "bloodling"
 	hijack_speed = 0.5
 	suicide_cry = "CONSUME!! CLAIM!! THERE WILL BE ANOTHER!!"
 	show_name_in_check_antagonists = TRUE

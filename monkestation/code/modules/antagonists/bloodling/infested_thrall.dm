@@ -4,7 +4,7 @@
 	antagpanel_category = ANTAG_GROUP_BLOODLING
 	job_rank = ROLE_BLOODLING_THRALL
 	antag_moodlet = /datum/mood_event/focused
-	antag_hud_name = "changeling"
+	antag_hud_name = "infested_thrall"
 	hijack_speed = 0
 	suicide_cry = "FOR THE MASTER!!"
 	genetic_points = 5
@@ -46,7 +46,7 @@
 	antagpanel_category = ANTAG_GROUP_BLOODLING
 	job_rank = ROLE_BLOODLING_THRALL
 	antag_moodlet = /datum/mood_event/focused
-	antag_hud_name = "changeling"
+	antag_hud_name = "infested_thrall"
 	hijack_speed = 0
 	suicide_cry = "FOR THE MASTER!!"
 
