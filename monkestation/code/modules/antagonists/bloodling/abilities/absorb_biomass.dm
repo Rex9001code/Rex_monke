@@ -21,6 +21,11 @@
 		return FALSE
 
 	var/mob/living/mob_to_absorb = target
+
+	if(!HAS_TRAIT(mob_to_absorb, MOB_ORGANIC))
+		owner.balloon_alert(owner, "doesn't work on non-organics!")
+		return FALSE
+
 	if(!iscarbon(mob_to_absorb))
 		return ..()
 
@@ -53,6 +58,7 @@
 		return TRUE
 
 	var/mob/living/mob_to_absorb = target
+
 	if(!iscarbon(mob_to_absorb))
 		biomass_gain = max(mob_to_absorb.getMaxHealth() * 0.5, biomass_gain)
 		if(biomass_gain > 150)
@@ -63,7 +69,7 @@
 			biomass_gain = 10
 	else
 		var/mob/living/carbon/carbon_to_absorb = target
-		if(issimian(carbon_to_absorb))
+		if(ismonkey(carbon_to_absorb))
 			biomass_gain = 50
 		else
 			biomass_gain = 100
