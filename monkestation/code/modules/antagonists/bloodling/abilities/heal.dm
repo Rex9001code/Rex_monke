@@ -1,7 +1,7 @@
 /datum/action/cooldown/mob_cooldown/bloodling/heal
 	name = "Heal"
 	desc = "Allows you to heal or revive a humanoid thrall. Costs 50 biomass."
-	button_icon_state = "alien_hide"
+	button_icon_state = "mend"
 	biomass_cost = 50
 
 /datum/action/cooldown/mob_cooldown/bloodling/heal/PreActivate(atom/target)

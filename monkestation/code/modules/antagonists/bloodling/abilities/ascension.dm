@@ -1,7 +1,7 @@
 /datum/action/cooldown/bloodling/ascension
 	name = "Ascend"
 	desc = "We reach our last form...Mass consumption is required. Costs 500 Biomass and takes 5 minutes for you to ascend."
-	button_icon_state = "dissonant_shriek"
+	button_icon_state = "ascend"
 	biomass_cost = 500
 	var/static/datum/dimension_theme/chosen_theme
 
