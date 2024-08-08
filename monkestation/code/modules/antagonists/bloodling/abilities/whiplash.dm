@@ -14,10 +14,15 @@
 	antimagic_flags = NONE
 	aoe_radius = 2
 
-	sparkle_path = /obj/effect/temp_visual/dir_setting/tailsweep
+	sparkle_path = /obj/effect/temp_visual/bloodling_tentacle
 
 	/// Since this isn't a bloodling subtype ability we need to recode the cost here
 	var/biomass_cost = 25
+
+/obj/effect/temp_visual/bloodling_tentacle
+	icon = 'monkestation/code/modules/antagonists/bloodling/sprites/bloodling_sprites.dmi'
+	icon_state = "tentacle_effect"
+	duration = 4
 
 /datum/action/cooldown/spell/aoe/repulse/bloodling/IsAvailable(feedback = FALSE)
 	. = ..()
