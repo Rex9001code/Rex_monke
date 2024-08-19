@@ -55,6 +55,9 @@ GLOBAL_LIST_EMPTY(arachnid_appendages_list) //Monkestation Addition
 GLOBAL_LIST_EMPTY(arachnid_chelicerae_list) //Monkestation Addition
 GLOBAL_LIST_EMPTY(goblin_ears_list) //Monkestation Addition
 GLOBAL_LIST_EMPTY(floran_leaves_list) //Monkestation Addition
+GLOBAL_LIST_EMPTY(satyr_fluff_list) //Monkestation Addition
+GLOBAL_LIST_EMPTY(satyr_tail_list) //Monkestation Addition
+GLOBAL_LIST_EMPTY(satyr_horns_list) //Monkestation Addition
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Blue" = "#3399ff",
@@ -79,6 +82,14 @@ GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"White" = "#f2f2f2",
 	"Fuschia" = "#FF0066", //Monkestation Addition
 	"Dark Purple" = "#502A77", //Monkestation Addition
+))
+
+GLOBAL_LIST_INIT(color_list_lustrous, list(
+	"Cyan Blue" = "#00ffff",
+	"Sky Blue" = "#37c0ff",
+	"Blue" = "#3374ff",
+	"Dark Blue" = "#5b5beb",
+	"Bright Red" = "#fa2d2d",
 ))
 
 GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list(
