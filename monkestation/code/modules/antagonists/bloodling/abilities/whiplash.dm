@@ -3,8 +3,8 @@
 	desc = "Grow whiplike appendages and throw back nearby attackers."
 	background_icon = 'monkestation/icons/mob/actions/backgrounds.dmi'
 	background_icon_state = "bg_bloodling"
-	button_icon = 'icons/mob/actions/actions_xeno.dmi'
-	button_icon_state = "tailsweep"
+	button_icon = 'monkestation/code/modules/antagonists/bloodling/sprites/bloodling_abilities.dmi'
+	button_icon_state = "whiplash"
 	sound = 'sound/magic/tail_swing.ogg'
 
 	spell_requirements = NONE

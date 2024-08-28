@@ -1,7 +1,7 @@
 /datum/action/cooldown/mob_cooldown/bloodling/infest
 	name = "Infest"
 	desc = "Allows you to infest a living creature, turning them into a thrall. Can be used on mindshielded people but it takes longer. Costs 75 biomass."
-	button_icon_state = "alien_hide"
+	button_icon_state = "infest"
 	biomass_cost = 75
 
 /datum/action/cooldown/mob_cooldown/bloodling/infest/PreActivate(atom/target)

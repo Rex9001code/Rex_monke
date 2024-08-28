@@ -1,7 +1,7 @@
 /datum/action/cooldown/bloodling_infect
 	name = "Infect"
 	desc = "Allows us to make someone our thrall, this consumes our host body and reveals our true form."
-	button_icon_state = "absorb_dna"
+	button_icon_state = "infest"
 	///if we're currently infecting
 	var/is_infecting = FALSE
 
