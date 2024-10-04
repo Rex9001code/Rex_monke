@@ -42,7 +42,7 @@
 		carbon_mob.revive(ADMIN_HEAL_ALL)
 
 	if(!carbon_mob.mind)
-		var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates_for_mob(
+		var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
 		"Would you like to be a [carbon_mob] servant of [owner]?",
 		ROLE_BLOODLING_THRALL,
 		ROLE_BLOODLING_THRALL,

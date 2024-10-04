@@ -7,23 +7,19 @@
 
 /datum/action/cooldown/bloodling/ascension/Activate(atom/target)
 	var/mob/living/basic/bloodling/our_mob = owner
-	our_mob.move_resist = INFINITY
-	ADD_TRAIT(our_mob, TRAIT_IMMOBILIZED, REF(src))
+	// Adds 500 biomass back
+	our_mob.add_biomass(500)
+	our_mob.evolution(6)
 	// Waits 5 minutes before calling the ascension
 	addtimer(CALLBACK(src, PROC_REF(ascend), our_mob), 5 MINUTES)
-	/* PLANS
-	* Make this spawn a cool meator heart/other chrysalis whilst the bloodling is gestating
-	*/
 	return TRUE
 
 /datum/action/cooldown/bloodling/ascension/proc/ascend(mob/living/basic/bloodling)
-	// Woah they can move
-	REMOVE_TRAIT(bloodling, TRAIT_IMMOBILIZED, REF(src))
+	// Calls the shuttle
 	SSshuttle.requestEvac(src, "ALERT: LEVEL 4 BIOHAZARD DETECTED. ORGANISM CONTAINMENT HAS FAILED. EVACUATE REMAINING PERSONEL.")
 
 	if(isnull(chosen_theme))
 		chosen_theme = new /datum/dimension_theme/bloodling()
-	// Placeholder code, just for testing
 	var/turf/start_turf = get_turf(bloodling)
 	var/greatest_dist = 0
 	var/list/turfs_to_transform = list()

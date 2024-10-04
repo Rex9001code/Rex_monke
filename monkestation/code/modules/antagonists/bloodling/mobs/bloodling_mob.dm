@@ -170,6 +170,8 @@
 			new_bloodling = new /mob/living/basic/bloodling/proper/tier4(src.loc)
 		if(5)
 			new_bloodling = new /mob/living/basic/bloodling/proper/tier5(src.loc)
+		if(6)
+			new_bloodling = new /mob/living/basic/bloodling/proper/ascending(src.loc)
 	evolution_mind_change(new_bloodling)
 
 
@@ -268,3 +270,28 @@
 		/datum/action/cooldown/bloodling_hivespeak,
 	)
 	speed = 2.5
+
+/mob/living/basic/bloodling/proper/ascending
+	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon_state = "heart"
+	icon_living = "heart"
+	evolution_level = 6
+	initial_powers = list(
+		/datum/action/cooldown/mob_cooldown/bloodling/absorb,
+		/datum/action/cooldown/bloodling/ascension,
+		/datum/action/cooldown/mob_cooldown/bloodling/infest,
+		/datum/action/cooldown/bloodling/build,
+		/datum/action/cooldown/mob_cooldown/bloodling/devour,
+		/datum/action/cooldown/bloodling/dissonant_shriek,
+		/datum/action/cooldown/spell/aoe/repulse/bloodling,
+		/datum/action/cooldown/mob_cooldown/bloodling/transfer_biomass,
+		/datum/action/cooldown/mob_cooldown/bloodling/heal,
+		/datum/action/cooldown/mob_cooldown/bloodling/give_life,
+		/datum/action/cooldown/bloodling_hivespeak,
+	)
+	speed = 0
+	move_resist = INFINITY
+
+/mob/living/basic/bloodling/proper/ascending/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(our_mob, TRAIT_IMMOBILIZED, REF(src))

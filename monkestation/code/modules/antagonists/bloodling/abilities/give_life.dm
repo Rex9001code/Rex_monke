@@ -21,7 +21,7 @@
 /datum/action/cooldown/mob_cooldown/bloodling/give_life/Activate(atom/target)
 	var/mob/living/target_mob = target
 
-	var/list/candidates = SSpolling.poll_ghost_candidates_for_mob(
+	var/list/candidates = SSpolling.poll_ghost_candidates(
 		"Would you like to be a [target_mob] servant of [owner]?",
 		ROLE_BLOODLING_THRALL,
 		ROLE_BLOODLING_THRALL,
