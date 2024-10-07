@@ -2,6 +2,7 @@
 	name = "minion"
 	desc = "A mass of code in a vague sprite. Report if you see this."
 
+	icon = 'monkestation/code/modules/antagonists/bloodling/sprites/bloodling_abilities.dmi'
 	biomass = 0
 	biomass_max = 200
 	damage_coeff = list(BRUTE = 1, BURN = 1.25, TOX = 1, CLONE = 1, STAMINA = 1, OXY = 1)
@@ -34,6 +35,9 @@
 	name = "wall of flesh"
 	desc = "A blobby mass of flesh of large size."
 
+	icon_state = "tank"
+	icon_living = "tank"
+	icon_dead = "tank_dead"
 	health = 200
 	maxHealth = 200
 	melee_damage_lower = 10

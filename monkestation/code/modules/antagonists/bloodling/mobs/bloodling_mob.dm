@@ -294,4 +294,4 @@
 
 /mob/living/basic/bloodling/proper/ascending/Initialize(mapload)
 	. = ..()
-	ADD_TRAIT(our_mob, TRAIT_IMMOBILIZED, REF(src))
+	ADD_TRAIT(src, TRAIT_IMMOBILIZED, REF(src))
