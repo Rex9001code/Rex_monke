@@ -28,7 +28,7 @@
 		10 SECONDS,
 		target_mob,
 		POLL_IGNORE_SHUTTLE_DENIZENS,
-		pic_source = target_mob
+		alert_pic = target_mob
 	)
 	if(!LAZYLEN(candidates))
 		owner.balloon_alert(owner, "[target_mob] rejects your generous gift...for now...")

@@ -43,13 +43,13 @@
 
 	if(!carbon_mob.mind)
 		var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
-		"Would you like to be a [carbon_mob] servant of [owner]?",
-		ROLE_BLOODLING_THRALL,
-		ROLE_BLOODLING_THRALL,
-		10 SECONDS,
-		carbon_mob,
-		POLL_IGNORE_SHUTTLE_DENIZENS,
-		pic_source = carbon_mob
+			"Would you like to be a [carbon_mob] servant of [owner]?",
+			ROLE_BLOODLING_THRALL,
+			ROLE_BLOODLING_THRALL,
+			10 SECONDS,
+			carbon_mob,
+			POLL_IGNORE_SHUTTLE_DENIZENS,
+			alert_pic = carbon_mob
 		)
 
 		if(!LAZYLEN(candidates))

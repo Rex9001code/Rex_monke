@@ -1,6 +1,7 @@
 /obj/structure/bloodling
 	name = "Abstract bloodling structure"
 	max_integrity = 100
+	icon = 'monkestation/code/modules/antagonists/bloodling/sprites/bloodling_abilities.dmi'
 
 /obj/structure/bloodling/run_atom_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	if(damage_flag == MELEE)
@@ -26,6 +27,7 @@
 	name = "Rat warren"
 	desc = "A pool of biomass and primordial soup, you hear a faint chittering from it."
 	max_integrity = 100
+	icon_state = "ratwarren"
 	///the minimum time it takes for a rat to spawn
 	var/minimum_rattime = 1 MINUTES
 	///the maximum time it takes for a rat to spawn

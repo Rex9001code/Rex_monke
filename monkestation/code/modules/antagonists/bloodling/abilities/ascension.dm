@@ -6,7 +6,7 @@
 	var/static/datum/dimension_theme/chosen_theme
 
 /datum/action/cooldown/bloodling/ascension/Activate(atom/target)
-	var/mob/living/basic/bloodling/our_mob = owner
+	var/mob/living/basic/bloodling/proper/our_mob = owner
 	// Adds 500 biomass back
 	our_mob.add_biomass(500)
 	our_mob.evolution(6)
