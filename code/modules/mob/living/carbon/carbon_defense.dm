@@ -6,7 +6,8 @@
 		return INFINITY //For all my homies that can not see in the world
 	var/obj/item/organ/internal/eyes/eyes = get_organ_slot(ORGAN_SLOT_EYES)
 	if(eyes)
-		. += eyes.flash_protect
+		if(!HAS_TRAIT(src, TRAIT_CONVERSION_FLASHED) || !(eyes.organ_flags & ORGAN_DOESNT_PROTECT_AGAINST_CONVERSION)) // MONKESTATION EDIT: Make IPCs not immune to rev and bb conversions.
+			. += eyes.flash_protect
 	else
 		return INFINITY //Can't get flashed without eyes
 	if(isclothing(head)) //Adds head protection
@@ -103,8 +104,7 @@
 		if(I.damtype == BRUTE && affecting.can_bleed())
 			if(prob(33))
 				I.add_mob_blood(src)
-				var/turf/location = get_turf(src)
-				add_splatter_floor(location)
+				blood_particles(amount = rand(1, 1 + round(I.force/15, 1)), angle = (user == src ? rand(0, 360): get_angle(user, src)))
 				if(get_dist(user, src) <= 1) //people with TK won't get smeared with blood
 					user.add_mob_blood(src)
 				if(affecting.body_zone == BODY_ZONE_HEAD)
@@ -520,12 +520,12 @@
 				add_mood_event("hug", /datum/mood_event/bad_touch_bear_hug)
 
 		// Let people know if they hugged someone really warm or really cold
-		if(helper.bodytemperature > BODYTEMP_HEAT_DAMAGE_LIMIT)
+		if(helper.bodytemperature > BODYTEMP_HEAT_DAMAGE_LIMIT || helper.has_status_effect(/datum/status_effect/bloodsucker_sol)) // monkestation edit: bloodsucker sol
 			to_chat(src, span_warning("It feels like [helper] is over heating as [helper.p_they()] hug[helper.p_s()] you."))
 		else if(helper.bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT)
 			to_chat(src, span_warning("It feels like [helper] is freezing as [helper.p_they()] hug[helper.p_s()] you."))
 
-		if(bodytemperature > BODYTEMP_HEAT_DAMAGE_LIMIT)
+		if(bodytemperature > BODYTEMP_HEAT_DAMAGE_LIMIT || has_status_effect(/datum/status_effect/bloodsucker_sol)) // monkestation edit: bloodsucker sol
 			to_chat(helper, span_warning("It feels like [src] is over heating as you hug [p_them()]."))
 		else if(bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT)
 			to_chat(helper, span_warning("It feels like [src] is freezing as you hug [p_them()]."))
@@ -572,9 +572,9 @@
 				visible_message(span_notice("[src] examines [p_them()]self."), \
 					span_notice("You check yourself for shrapnel."))
 			if(I.isEmbedHarmless())
-				to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>")
+				to_chat(src, "\t <a href='byond://?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>")
 			else
-				to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
+				to_chat(src, "\t <a href='byond://?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
 
 	return embeds
 

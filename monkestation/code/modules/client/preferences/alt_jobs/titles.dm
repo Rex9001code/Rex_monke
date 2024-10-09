@@ -29,6 +29,7 @@
 		"Artist",
 		"Off-Duty Staff",
 		"Off-Duty Crew",
+		"Test Subject",
 	)
 
 /datum/job/atmospheric_technician
@@ -177,6 +178,7 @@
 		"Forensic Technician",
 		"Private Investigator",
 		"Forensic Scientist",
+		"Paranormal Investigator",
 	)
 
 /datum/job/doctor
@@ -291,6 +293,7 @@
 		"Biorobotics Director",
 		"Research Supervisor",
 		"Chief Science Officer",
+		"Chief Artificer",
 	)
 
 /datum/job/roboticist
@@ -317,6 +320,8 @@
 		"Xenoarchaeologist",
 		"Research Assistant",
 		"Graduate Student",
+		"Artificer",
+		"Cryptozoologist",
 	)
 
 /datum/job/security_officer

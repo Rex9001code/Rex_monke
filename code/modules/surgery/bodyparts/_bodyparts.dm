@@ -347,7 +347,7 @@
 
 	for(var/obj/item/embedded_thing in embedded_objects)
 		var/stuck_word = embedded_thing.isEmbedHarmless() ? "stuck" : "embedded"
-		check_list += "\t <a href='?src=[REF(examiner)];embedded_object=[REF(embedded_thing)];embedded_limb=[REF(src)]' class='warning'>There is \a [embedded_thing] [stuck_word] in your [name]!</a>"
+		check_list += "\t <a href='byond://?src=[REF(examiner)];embedded_object=[REF(embedded_thing)];embedded_limb=[REF(src)]' class='warning'>There is \a [embedded_thing] [stuck_word] in your [name]!</a>"
 
 
 /obj/item/bodypart/blob_act()
@@ -406,18 +406,27 @@
 	SHOULD_CALL_PARENT(TRUE)
 
 	var/atom/drop_loc = drop_location()
-	if(IS_ORGANIC_LIMB(src))
+	if(IS_ORGANIC_LIMB(src) && violent_removal)
 		playsound(drop_loc, 'sound/misc/splort.ogg', 50, TRUE, -1)
 	seep_gauze(9999) // destroy any existing gauze if any exists
-	for(var/obj/item/organ/bodypart_organ in get_organs())
-		bodypart_organ.transfer_to_limb(src, owner)
-	for(var/obj/item/organ/external/external in external_organs)
-		external.remove_from_limb()
-		external.forceMove(drop_loc)
+	for(var/obj/item/organ/organ as anything in get_organs())
+		if(owner)
+			organ.Remove(owner)
+		else
+			organ.remove_from_limb(src)
+		organ.forceMove(drop_loc)
+		if(violent_removal)
+			organ.fly_away(drop_loc)
 	for(var/obj/item/item_in_bodypart in src)
 		item_in_bodypart.forceMove(drop_loc)
+		if(violent_removal && owner)
+			item_in_bodypart.transfer_mob_blood_dna(owner)
 
-	update_icon_dropped()
+	if(owner)
+		owner.update_body()
+	else
+		update_icon_dropped()
+
 
 ///since organs aren't actually stored in the bodypart themselves while attached to a person, we have to query the owner for what we should have
 /obj/item/bodypart/proc/get_organs()

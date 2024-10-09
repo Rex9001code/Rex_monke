@@ -33,6 +33,10 @@
 	worn_icon_state = "gorilla"
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 
+/obj/item/clothing/suit/costume/bunnysuit/regular
+	slowdown = 0
+	desc = "Hop Hop Hop! It looks old."
+
 /obj/item/clothing/suit/shipwreckedsuit
 	name = "shipwrecked captain suit"
 	desc = "DISCLAIMER:Not Space Proof. Wearing this suit gives you the luck of a true space captain! Just avoid the space rocks..."
@@ -161,3 +165,18 @@
 /obj/item/clothing/head/hooded/ashsuit/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/suit/infinity_jacket
+	name = "infinity jersey"
+	desc = "A jersey labelled '88', somehow leaving a threatening aura around it."
+	icon = 'monkestation/icons/obj/clothing/suits.dmi'
+	worn_icon = 'monkestation/icons/mob/clothing/suit.dmi'
+	icon_state = "infinity_jersey"
+
+/obj/item/clothing/suit/thekiller_robe
+	name = "killer's robe"
+	desc = "As long as there has been man, there has been The Killer. They are surprisingly into the theater scene."
+	icon = 'monkestation/icons/obj/clothing/suits.dmi'
+	worn_icon = 'monkestation/icons/mob/clothing/suit.dmi'
+	icon_state = "thekiller_robe"
+	flags_inv = HIDEJUMPSUIT

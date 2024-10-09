@@ -15,6 +15,7 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEHAIR
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION
+	resistance_flags = FIRE_PROOF // monkestation edit so helmets don't burn, not sure how tf that happened
 
 	dog_fashion = /datum/dog_fashion/head/helmet
 
@@ -144,6 +145,12 @@
 	inhand_icon_state = "blueshift_helmet"
 	custom_premium_price = PAYCHECK_COMMAND
 
+/obj/item/clothing/head/helmet/guardmanhelmet
+	name = "guardman's helmet"
+	desc = "Keeps your brain intact when fighting heretics"
+	icon = 'monkestation/icons/obj/clothing/hats.dmi'
+	worn_icon = 'monkestation/icons/mob/clothing/head.dmi'
+	icon_state = "guardman_helmet"
 
 /obj/item/clothing/head/helmet/toggleable
 	dog_fashion = null
@@ -529,12 +536,12 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 /datum/armor/helmet_elder_atmosian
-	melee = 25
-	bullet = 20
+	melee = 30
+	bullet = 30
 	laser = 30
 	energy = 30
 	bomb = 85
 	bio = 10
-	fire = 65
+	fire = 100
 	acid = 40
 	wound = 15
