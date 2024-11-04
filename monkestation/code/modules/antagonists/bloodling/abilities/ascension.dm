@@ -13,7 +13,8 @@
 	var/tgui_response = tgui_alert(our_mob, "Are you prepared to ascend?", "Ascension", responses, 0)
 	if(tgui_response == "No")
 		return
-
+	var/turf/our_turf = our_mob.get_turf
+	priority_announce("ALERT: LEVEL 4 BIOHAZARD MORPHING IN [our_turf.loc]. STOP IT AT ALL COSTS.", "Biohazard")
 	our_mob.evolution(6)
 	// Waits 5 minutes before calling the ascension
 	addtimer(CALLBACK(src, PROC_REF(ascend), our_mob), 5 MINUTES)
