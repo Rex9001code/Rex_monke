@@ -4,6 +4,11 @@
 	button_icon_state = "absorb"
 	/// If the bloodling is currently absorbing
 	var/is_absorbing = FALSE
+	/// Items we can absorb
+	var/list/absorbable_types = list(
+		/obj/effect/decal/cleanable/blood,
+		/obj/item/food.
+	)
 
 /datum/action/cooldown/mob_cooldown/bloodling/absorb/PreActivate(atom/target)
 	if(owner == target)
@@ -13,7 +18,7 @@
 		owner.balloon_alert(owner, "Already absorbing!")
 		return FALSE
 
-	if(istype(target, /obj/item/food/deadmouse))
+	if(is_type_in_list(target, absorbable_types))
 		return ..()
 
 	if(!ismob(target))
@@ -45,10 +50,7 @@
 
 	our_mob.balloon_alert(our_mob, "You begin absorbing [target]!")
 
-	// This prevents the mob from being dragged away from the bloodling during the process
-	target.AddComponentFrom(REF(src), /datum/component/leash, our_mob, 1)
-
-	if(istype(target, /obj/item/food/deadmouse))
+	if(is_type_in_list(target, absorbable_types))
 		our_mob.add_biomass(biomass_gain)
 		qdel(target)
 		our_mob.visible_message(
@@ -58,6 +60,9 @@
 		return TRUE
 
 	var/mob/living/mob_to_absorb = target
+
+	// This prevents the mob from being dragged away from the bloodling during the process
+	mob_to_absorb.AddComponentFrom(REF(src), /datum/component/leash, our_mob, 1)
 
 	if(!iscarbon(mob_to_absorb))
 		biomass_gain = max(mob_to_absorb.getMaxHealth() * 0.5, biomass_gain)
