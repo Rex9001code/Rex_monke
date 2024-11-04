@@ -4,11 +4,16 @@
 	button_icon_state = "ascend"
 	biomass_cost = 500
 	var/static/datum/dimension_theme/chosen_theme
+	var/list/responses = list("Yes", "No")
 
 /datum/action/cooldown/bloodling/ascension/Activate(atom/target)
 	var/mob/living/basic/bloodling/proper/our_mob = owner
 	// Adds 500 biomass back
 	our_mob.add_biomass(500)
+	var/tgui_response = tgui_alert(our_mob, "Are you prepared to ascend?", "Ascension", responses, 0)
+	if(tgui_response == "No")
+		return
+
 	our_mob.evolution(6)
 	// Waits 5 minutes before calling the ascension
 	addtimer(CALLBACK(src, PROC_REF(ascend), our_mob), 5 MINUTES)
