@@ -18,6 +18,9 @@
 	name = "harvester"
 	desc = "A mass of flesh with two large scything talons."
 
+	icon_state = "harvester"
+	icon_living = "harvester"
+	icon_dead = "harvester_dead"
 	health = 100
 	maxHealth = 100
 	melee_damage_lower = 15
